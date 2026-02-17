@@ -1,0 +1,15 @@
+name: Keep App Awake
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch: 
+
+jobs:
+  ping_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping the App
+        run: |
+          # Replace with your actual Streamlit App URL
+          curl -I https://pitchviz-jhughes.streamlit.app/

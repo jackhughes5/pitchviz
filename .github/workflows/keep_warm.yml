@@ -2,7 +2,7 @@ name: Keep App Awake
 
 on:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch: 
 
 jobs:
@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Ping the App
         run: |
-          curl -I https://pitchviz-jhughes.streamlit.app/
+          curl -L https://pitchviz-jhughes.streamlit.app/
